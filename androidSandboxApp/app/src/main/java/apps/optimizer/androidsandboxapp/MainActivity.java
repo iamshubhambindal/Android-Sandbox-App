@@ -8,6 +8,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.HashMap;
 import com.adobe.mobile.*;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,12 +37,17 @@ public class MainActivity extends AppCompatActivity {
         //Turns on debug logging
         Config.setDebugLogging(true);
 
+        String token = FirebaseInstanceId.getInstance().getToken();
+        Config.setPushIdentifier(token);
+        Log.d("Registration token: ", token);
 
+        /*
         Intent i = new Intent(this.getApplicationContext(), MyFirebaseInstanceIDService.class);
         startService(i);
+        */
 
         TextView pushText = (TextView) findViewById(R.id.pushText);
-        String pushLine = "Push ID: " ;
+        String pushLine = "Push ID: " + token;
         pushText.setText(pushLine);
 
         TextView mcidText = (TextView) findViewById(R.id.mcidText);
@@ -90,23 +97,26 @@ public class MainActivity extends AppCompatActivity {
         EditText firstName = (EditText) findViewById(R.id.firstName);
         EditText lastName = (EditText) findViewById(R.id.lastName);
 
-        String userKey = email.getText().toString();
-        String fNameStr = firstName.getText().toString();
-        String lNameStr = lastName.getText().toString();
+        String userKey = "";
+        String strEmail = email.getText().toString();
+        String strFirstName = firstName.getText().toString();
+        String strLastName = lastName.getText().toString();
         String marketingCloudId = Visitor.getMarketingCloudId();
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("triggerKey", "collectPII");
         data.put("marketingCloudId", marketingCloudId);
         data.put("userKey", userKey);
-        data.put("cusFirstName", fNameStr);
-        data.put("cusLastName", lNameStr);
+        data.put("cusEmail", strEmail);
+        data.put("cusFirstName", strFirstName);
+        data.put("cusLastName", strLastName);
         Config.collectPII(data);
 
         Log.d("MCID ", marketingCloudId);
         Log.d("userKey ", userKey);
-        Log.d("First Name ", fNameStr);
-        Log.d("Last Name ", lNameStr);
+        Log.d("Email ", strEmail);
+        Log.d("First Name ", strFirstName);
+        Log.d("Last Name ", strLastName);
 
         //Snackbar sb = Snackbar.make(view, R.string.confirmCollectPII,Snackbar.LENGTH_LONG);
         //sb.show();
