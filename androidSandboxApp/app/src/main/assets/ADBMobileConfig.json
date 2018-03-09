@@ -1,0 +1,98 @@
+{
+  "lastModified": "2016-03-28T17:40:19.302Z",
+  "marketingCloud": {
+    "org": "407D5E065A1596880A495E5C@AdobeOrg"     },
+  "analytics": {
+    "rsids": "",
+    "server": "",
+    "ssl": false,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "PDT",
+    "timezoneOffset": -420,
+    "referrerTimeout": 0,
+    "backdateSessionInfo": false,
+    "poi": []
+  },
+  "messages": [
+
+    {
+      "messageId": "primaryCollectPII",
+      "payload": {
+        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQTF4ifuOF5zUy-0qaORMG1XZidk5HlZYUzHdmY8eHRrQElHxlEEYw7M0UK9zgmRaztbkKr_ogLE6jtvWqbxoZ9xklm3U/subscriptions/{%mcid%}",
+        "templatebody": "eyAgICAgDQogICAgICJ1c2VyS2V5IjogInt1c2VyS2V5fSIsDQogICAgICJwdXNoUGxhdGZvcm0iOiJnY20iLA0KICAgICAibWFya2V0aW5nQ2xvdWRJZCI6InslbWNpZCV9IiwNCiAgICAgImN1c0VtYWlsIjogIntjdXNFbWFpbH0iLA0KICAgICAiY3VzRmlyc3ROYW1lIjoie2N1c0ZpcnN0TmFtZX0iLA0KICAgICAiY3VzTGFzdE5hbWUiOiJ7Y3VzTGFzdE5hbWV9Ig0KfQ==",
+        "contenttype": "application/json",
+        "timeout": 2
+      },
+      "showOffline": true,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "template": "pii",
+      "audiences": [],
+      "triggers": [
+        {
+          "key": "triggerKey",
+          "matches": "eq",
+          "values": [
+            "collectPII"
+          ]
+        }
+      ]
+    },
+
+    {
+      "messageId": "0664bbc1-77a0-4468-9da2-8ca63e220606",
+      "recipient": "Custom",
+      "payload": {
+        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQaSr9uZvrDzziXxu1rflsTt4t6pnEoEDIuQ_wmLv1JvazyMavePZxqwoOP6ErhIIwHSoU46u2wYiFpeSx4jN3JsFF5-Y/subscriptions/{%mcid%}",
+        "templatebody": "eyAgICAgDQogICAgICJwdXNoUGxhdGZvcm0iOiJnY20iLA0KICAgICAibWFya2V0aW5nQ2xvdWRJZCI6InslbWNpZCV9Ig0KfQ==",
+        "contenttype": "application/json",
+        "timeout": 2
+      },
+      "showOffline": true,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "template": "callback",
+      "audiences": [],
+      "triggers": [
+        {
+          "key": "a.LaunchEvent",
+          "matches": "nx",
+          "values": null
+        }
+      ]
+    },
+
+
+    {
+      "messageId": "082369b8-53fd-44b4-87de-c29253d4d734",
+      "recipient": "Custom",
+      "payload": {
+        "templateurl": "https://summit04.campaign-demo.adobe.com/r?id={delivery},{broadlog},{action}",
+        "templatebody": "",
+        "contenttype": "",
+        "timeout": 200
+      },
+      "showOffline": true,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "template": "callback",
+      "audiences": [],
+      "triggers": [
+        {
+          "key": "pev2",
+          "matches": "eq",
+          "values": [
+            "AMACTION:tracking"
+          ]
+        }
+      ]
+    }
+  ]
+}

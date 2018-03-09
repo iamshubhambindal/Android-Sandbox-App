@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "936780387388",
+    "firebase_url": "https://optimizer-sandbox-app.firebaseio.com",
+    "project_id": "optimizer-sandbox-app",
+    "storage_bucket": "optimizer-sandbox-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936780387388:android:dafa1335c868eb89",
+        "android_client_info": {
+          "package_name": "apps.optimizer.androidsandboxapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936780387388-tbp6nckfvikqpnp3he08hd8bcqnqr8b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSi0jXITd0BsG3MvGnM1pqMMeRaejbZrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
