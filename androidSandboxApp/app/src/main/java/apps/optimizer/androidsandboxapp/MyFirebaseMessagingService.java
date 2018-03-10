@@ -36,6 +36,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         String title = dataMap.get("title");
         String body = dataMap.get("body");
         String imageUrl = dataMap.get("media-attachment-url");
+        String deepLink = dataMap.get("uri");
         bitmap = getBitmapfromUrl(imageUrl);
 
         if (delivery != null && broadlog != null) {
@@ -46,17 +47,26 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Analytics.trackAction("tracking", contextData);
         }
 
-        sendNotification(title, body, bitmap);
+        sendNotification(title, body, bitmap, deepLink);
     }
 
 
 
 
-    private void sendNotification(String title, String message, Bitmap image) {
-        Intent intent = new Intent(this, MainActivity.class);
+    private void sendNotification(String title, String message, Bitmap image, String deepLink) {
+        //Intent intent = new Intent(this, MainActivity.class);
+        Intent intent;
+
+        if (deepLink !=null) {
+            intent = new Intent(this,DeepLink.class);
+        } else {
+            intent = new Intent(this, MainActivity.class);
+        }
+
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
+
 
         String channelId = getString(R.string.default_notification_channel_id);
         //Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
