@@ -22,7 +22,7 @@
     {
       "messageId": "primaryCollectPII",
       "payload": {
-        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQTF4ifuOF5zUy-0qaORMG1XZidk5HlZYUzHdmY8eHRrQElHxlEEYw7M0UK9zgmRaztbkKr_ogLE6jtvWqbxoZ9xklm3U/subscriptions/{%mcid%}",
+        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQKHfMxz0dtjAZcrtWN1UETJVH-Vtqoc9NlTjGyoCV5LRU0yvTXSXoaCAQIubHmRMjqS6HVQls48OSWKbSFaUm4UF_i9M/subscriptions/{%mcid%}",
         "templatebody": "eyAgICAgDQogICAgICJ1c2VyS2V5IjogInt1c2VyS2V5fSIsDQogICAgICJwdXNoUGxhdGZvcm0iOiJnY20iLA0KICAgICAibWFya2V0aW5nQ2xvdWRJZCI6InslbWNpZCV9IiwNCiAgICAgImN1c0VtYWlsIjogIntjdXNFbWFpbH0iLA0KICAgICAiY3VzRmlyc3ROYW1lIjoie2N1c0ZpcnN0TmFtZX0iLA0KICAgICAiY3VzTGFzdE5hbWUiOiJ7Y3VzTGFzdE5hbWV9Ig0KfQ==",
         "contenttype": "application/json",
         "timeout": 2
@@ -48,7 +48,7 @@
       "messageId": "0664bbc1-77a0-4468-9da2-8ca63e220606",
       "recipient": "Custom",
       "payload": {
-        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQaSr9uZvrDzziXxu1rflsTt4t6pnEoEDIuQ_wmLv1JvazyMavePZxqwoOP6ErhIIwHSoU46u2wYiFpeSx4jN3JsFF5-Y/subscriptions/{%mcid%}",
+        "templateurl": "https://summit04.campaign-demo.adobe.com/rest/head/mobileApp/@BsRzp6kNHdc8xLV5wcsDAQ1RU_cXKXbDVjYJ08wtYy06A5K1V-9X8g4Gcc8gyXiQKHfMxz0dtjAZcrtWN1UETJVH-Vtqoc9NlTjGyoCV5LRU0yvTXSXoaCAQIubHmRMjqS6HVQls48OSWKbSFaUm4UF_i9M/subscriptions/{%mcid%}",
         "templatebody": "eyAgICAgDQogICAgICJwdXNoUGxhdGZvcm0iOiJnY20iLA0KICAgICAibWFya2V0aW5nQ2xvdWRJZCI6InslbWNpZCV9Ig0KfQ==",
         "contenttype": "application/json",
         "timeout": 2

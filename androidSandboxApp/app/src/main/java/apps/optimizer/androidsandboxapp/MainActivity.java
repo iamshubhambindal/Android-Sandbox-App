@@ -39,12 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         String token = FirebaseInstanceId.getInstance().getToken();
         Config.setPushIdentifier(token);
-        Log.d("Registration token: ", token);
+        //Log.d("Registration token: ", token);
 
-        /*
-        Intent i = new Intent(this.getApplicationContext(), MyFirebaseInstanceIDService.class);
-        startService(i);
-        */
 
         TextView pushText = (TextView) findViewById(R.id.pushText);
         String pushLine = "Push ID: " + token;
